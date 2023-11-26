@@ -104,186 +104,271 @@ import Square from './components/shapes/Square.vue';
 import Squircle from './components/shapes/Squircle.vue';
 
 export const properties = {
-	accessory: {
-		default: 'none',
-		is_color: false,
-		map: {
-			none: null,
-			roundGlasses: RoundGlasses,
-			tinyGlasses: TinyGlasses,
-			shades: Shades,
-			hoopEarrings: HoopEarrings,
-			faceMask: FaceMask,
-		},
-	},
-	body: {
-		default: 'chest',
-		is_color: false,
-		map: {
-			chest: { Front: null, Back: Chest },
-			breasts: { Front: BreastsFront, Back: BreastsBack },
-		},
-	},
-	clothing: {
-		default: 'naked',
-		is_color: false,
-		map: {
-			naked: { Front: null, Back: null },
-			shirt: { Front: null, Back: Shirt },
-			dressShirt: { Front: null, Back: DressShirt },
-			vneck: { Front: null, Back: VNeck },
-			tankTop: { Front: null, Back: TankTop },
-			dress: { Front: DressFront, Back: DressBack },
-			denimJacket: { Front: null, Back: DenimJacket },
-			hoodie: { Front: null, Back: Hoodie },
-			chequeredShirt: { Front: ChequeredShirtFront, Back: ChequeredShirtBack },
-			chequeredShirtDark: { Front: ChequeredShirtDarkFront, Back: ChequeredShirtDarkBack },
-		},
-	},
-	clothingColor: {
-		is_color: true,
-		map: colors.clothing,
-	},
-	eyebrows: {
-		default: 'none',
-		is_color: false,
-		map: {
-			none: null,
-			raised: NormalEyebrows,
-			leftLowered: LeftLoweredEyebrows,
-			serious: SeriousEyebrows,
-			angry: AngryEyebrows,
-			concerned: ConcernedEyebrows,
-		},
-	},
-	eyes: {
-		default: 'normal',
-		is_color: false,
-		map: {
-			normal: NormalEyes,
-			leftTwitch: LeftTwitchEyes,
-			happy: HappyEyes,
-			cute: CuteEyes,
-			content: ContentEyes,
-			squint: SquintEyes,
-			simple: SimpleEyes,
-			dizzy: DizzyEyes,
-			crazy: CrazyEyes,
-			wink: WinkEyes,
-			hearts: HeartEyes,
-			dollars: DollarEyes,
-			stars: StarEyes,
-			cyborg: CyborgEyes,
-			eyePatch: EyePatch,
-			eyePatch2: EyePatch2,
-		},
-	},
-	facialHair: {
-		default: 'none',
-		is_color: false,
-		map: {
-			none: null,
-			goatee: Goatee,
-			stubble: StubbleBeard,
-			mediumBeard: MediumBeard,
-		},
-	},
-	facialHairColor: {
-		is_color: true,
-		map: colors.hair,
-	},
-	graphic: {
-		default: 'none',
-		is_color: false,
-		map: {
-			none: null,
-			redwood: RedwoodGraphic,
-			gatsby: GatsbyGraphic,
-			vue: VueGraphic,
-			react: ReactGraphic,
-			graphQL: GraphQLGraphic,
-			rainbow: RainbowGraphic,
-			donut: DonutGraphic,
-		},
-	},
-	hair: {
-		default: 'none',
-		is_color: false,
-		map: {
-			none: { Front: null, Back: null },
-			long: { Front: LongHairFront, Back: LongHairBack },
-			bun: { Front: BunHair, Back: null },
-			short: { Front: ShortHair, Back: null },
-			pixie: { Front: PixieCut, Back: null },
-			balding: { Front: BaldingHair, Back: null },
-			buzz: { Front: BuzzCut, Back: null },
-			afro: { Front: AfroFront, Back: AfroBack },
-			bob: { Front: BobCutFront, Back: BobCutBack },
-			mohawk: { Front: Mohawk, Back: null },
-		},
-	},
-	hairColor: {
-		is_color: true,
-		map: colors.hair,
-	},
-	hat: {
-		default: 'none',
-		is_color: false,
-		map: {
-			none: { Front: null, Back: null },
-			beanie: { Front: BeanieFront, Back: BeanieBack },
-			partyHat: { Front: PartyHat, Back: null },
-			turban: { Front: Turban, Back: null },
-			hijab: { Front: Hijab, Back: null },
-		},
-	},
-	hatColor: {
-		is_color: true,
-		map: colors.clothing,
-	},
-	lashes: {
-		default: 'false',
-		is_color: false,
-		map: {
-			true: true,
-			false: false
-		},
-	},
-	lipColor: {
-		is_color: true,
-		map: colors.lips,
-	},
-	mouth: {
-		default: 'grin',
-		is_color: false,
-		map: {
-			grin: Grin,
-			sad: SadMouth,
-			openSmile: SmileOpen,
-			lips: Lips,
-			open: OpenMouth,
-			serious: SeriousMouth,
-			tongue: Tongue,
-			piercedTongue: PiercedTongue,
-			vomitingRainbow: VomitingRainbow,
-		},
-	},
-	shape: {
-		default: 'none',
-		is_color: false,
-		map: {
-			none: null,
-			circle: Circle,
-			square: Square,
-			squircle: Squircle,
-		},
-	},
-	shapeColor: {
-		is_color: true,
-		map: colors.shape,
-	},
-	skinTone: {
-		is_color: true,
-		map: colors.skin,
-	},
-}
+  accessory: {
+    default: 'none',
+    is_color: false,
+    map: {
+      none: null,
+      roundGlasses: RoundGlasses,
+      tinyGlasses: TinyGlasses,
+      shades: Shades,
+      hoopEarrings: HoopEarrings,
+      faceMask: FaceMask,
+    },
+  },
+  body: {
+    default: 'chest',
+    is_color: false,
+    map: {
+      chest: {
+        Front: null,
+        Back: Chest
+      },
+      breasts: {
+        Front: BreastsFront,
+        Back: BreastsBack
+      },
+    },
+  },
+  clothing: {
+    default: 'naked',
+    is_color: false,
+    map: {
+      naked: {
+        Front: null,
+        Back: null
+      },
+      shirt: {
+        Front: null,
+        Back: Shirt
+      },
+      dressShirt: {
+        Front: null,
+        Back: DressShirt
+      },
+      vneck: {
+        Front: null,
+        Back: VNeck
+      },
+      tankTop: {
+        Front: null,
+        Back: TankTop
+      },
+      dress: {
+        Front: DressFront,
+        Back: DressBack
+      },
+      denimJacket: {
+        Front: null,
+        Back: DenimJacket
+      },
+      hoodie: {
+        Front: null,
+        Back: Hoodie
+      },
+      chequeredShirt: {
+        Front: ChequeredShirtFront,
+        Back: ChequeredShirtBack
+      },
+      chequeredShirtDark: {
+        Front: ChequeredShirtDarkFront,
+        Back: ChequeredShirtDarkBack
+      },
+    },
+  },
+  clothingColor: {
+    is_color: true,
+    map: colors.clothing,
+  },
+  eyebrows: {
+    default: 'none',
+    is_color: false,
+    map: {
+      none: null,
+      raised: NormalEyebrows,
+      leftLowered: LeftLoweredEyebrows,
+      serious: SeriousEyebrows,
+      angry: AngryEyebrows,
+      concerned: ConcernedEyebrows,
+    },
+  },
+  eyes: {
+    default: 'normal',
+    is_color: false,
+    map: {
+      normal: NormalEyes,
+      leftTwitch: LeftTwitchEyes,
+      happy: HappyEyes,
+      cute: CuteEyes,
+      content: ContentEyes,
+      squint: SquintEyes,
+      simple: SimpleEyes,
+      dizzy: DizzyEyes,
+      crazy: CrazyEyes,
+      wink: WinkEyes,
+      hearts: HeartEyes,
+      dollars: DollarEyes,
+      stars: StarEyes,
+      cyborg: CyborgEyes,
+      eyePatch: EyePatch,
+      eyePatch2: EyePatch2,
+    },
+  },
+  facialHair: {
+    default: 'none',
+    is_color: false,
+    map: {
+      none: null,
+      goatee: Goatee,
+      stubble: StubbleBeard,
+      mediumBeard: MediumBeard,
+    },
+  },
+  facialHairColor: {
+    is_color: true,
+    map: colors.hair,
+  },
+  graphic: {
+    default: 'none',
+    is_color: false,
+    map: {
+      none: null,
+      redwood: RedwoodGraphic,
+      gatsby: GatsbyGraphic,
+      vue: VueGraphic,
+      react: ReactGraphic,
+      graphQL: GraphQLGraphic,
+      rainbow: RainbowGraphic,
+      donut: DonutGraphic,
+    },
+  },
+  hair: {
+    default: 'none',
+    is_color: false,
+    map: {
+      none: {
+        Front: null,
+        Back: null
+      },
+      long: {
+        Front: LongHairFront,
+        Back: LongHairBack
+      },
+      bun: {
+        Front: BunHair,
+        Back: null
+      },
+      short: {
+        Front: ShortHair,
+        Back: null
+      },
+      pixie: {
+        Front: PixieCut,
+        Back: null
+      },
+      balding: {
+        Front: BaldingHair,
+        Back: null
+      },
+      buzz: {
+        Front: BuzzCut,
+        Back: null
+      },
+      afro: {
+        Front: AfroFront,
+        Back: AfroBack
+      },
+      bob: {
+        Front: BobCutFront,
+        Back: BobCutBack
+      },
+      mohawk: {
+        Front: Mohawk,
+        Back: null
+      },
+    },
+  },
+  hairColor: {
+    is_color: true,
+    map: colors.hair,
+  },
+  hat: {
+    default: 'none',
+    is_color: false,
+    map: {
+      none: {
+        Front: null,
+        Back: null
+      },
+      beanie: {
+        Front: BeanieFront,
+        Back: BeanieBack
+      },
+      partyHat: {
+        Front: PartyHat,
+        Back: null
+      },
+      turban: {
+        Front: Turban,
+        Back: null
+      },
+      hijab: {
+        Front: Hijab,
+        Back: null
+      },
+      internCap: {
+        Front: InternCap,
+        Back: null
+      }
+    },
+  },
+  hatColor: {
+    is_color: true,
+    map: colors.clothing,
+  },
+  lashes: {
+    default: 'false',
+    is_color: false,
+    map: {
+      true: true,
+      false: false
+    },
+  },
+  lipColor: {
+    is_color: true,
+    map: colors.lips,
+  },
+  mouth: {
+    default: 'grin',
+    is_color: false,
+    map: {
+      grin: Grin,
+      sad: SadMouth,
+      openSmile: SmileOpen,
+      lips: Lips,
+      open: OpenMouth,
+      serious: SeriousMouth,
+      tongue: Tongue,
+      piercedTongue: PiercedTongue,
+      vomitingRainbow: VomitingRainbow,
+    },
+  },
+  shape: {
+    default: 'none',
+    is_color: false,
+    map: {
+      none: null,
+      circle: Circle,
+      square: Square,
+      squircle: Squircle,
+    },
+  },
+  shapeColor: {
+    is_color: true,
+    map: colors.shape,
+  },
+  skinTone: {
+    is_color: true,
+    map: colors.skin,
+  },
+};
