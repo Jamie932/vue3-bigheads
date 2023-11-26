@@ -1,12 +1,12 @@
 {
-  "name": "vue-bigheads",
-  "version": "0.2.1",
-  "description": "BigHeads library by @RobertBroersma ported to Vue, with some added extra features",
+  "name": "vue3-bigheads",
+  "version": "0.1.0",
+  "description": "BigHeads library by @RobertBroersma ported to Vue2 by @DerpyScripts and ported to Vue3 by @Jamie932, with some added extra features",
   "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DerpyScripts/vue-bigheads.git"
+    "url": "git+https://github.com/Jamie932/vue3-bigheads.git"
   },
-  "author": "Arturs Dobrecovs",
+  "author": "Jamie932",
   "license": "MIT"
 }
